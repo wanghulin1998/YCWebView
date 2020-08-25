@@ -32,8 +32,6 @@ import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 import com.ycbjie.webviewlib.base.X5WebChromeClient;
-import com.ycbjie.webviewlib.inter.HeartJavaScriptFunction;
-import com.ycbjie.webviewlib.tools.CrashMonitor;
 import com.ycbjie.webviewlib.tools.WebViewException;
 import com.ycbjie.webviewlib.utils.FastClickUtils;
 import com.ycbjie.webviewlib.utils.X5WebUtils;

@@ -110,7 +110,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this,DeepLinkActivity.class));
                 break;
             case R.id.tv_10:
-                startActivity(new Intent(this, TenActivity.class));
                 break;
             case R.id.tv_11:
                 openLink(this,"https://juejin.im/user/5939433efe88c2006afa0c6e/posts");

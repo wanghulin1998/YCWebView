@@ -5,23 +5,23 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.ycbjie.slide.SlideLayout
-        android:id="@+id/slideDetailsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:default_panel="front"
-        app:duration="200"
-        app:percent="0.1">
+<!--    <com.ycbjie.slide.SlideLayout-->
+<!--        android:id="@+id/slideDetailsLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:default_panel="front"-->
+<!--        app:duration="200"-->
+<!--        app:percent="0.1">-->
 
-        <FrameLayout
-            android:id="@+id/fl_shop_main"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+<!--        <FrameLayout-->
+<!--            android:id="@+id/fl_shop_main"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
 
-        <include layout="@layout/include_shop_detail"/>
+<!--        <include layout="@layout/include_shop_detail"/>-->
 
 
-    </com.ycbjie.slide.SlideLayout>
+<!--    </com.ycbjie.slide.SlideLayout>-->
 
 
 

@@ -72,7 +72,6 @@
             android:launchMode="singleTask"
             android:configChanges="orientation|screenSize|keyboardHidden"/>
         <activity android:name=".FileDisplayActivity"/>
-        <activity android:name=".TenActivity"/>
         <activity android:name=".DownActivity"/>
         <activity android:name=".NativeActivity2"/>
         <activity android:name=".NativeActivity3"/>
