@@ -2,7 +2,6 @@ package com.ycbjie.webviewlib.tls;
 
 import android.text.TextUtils;
 
-import com.alibaba.sdk.android.httpdns.HttpDnsService;
 import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
 import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
 import com.ycbjie.webviewlib.utils.X5LogUtils;
@@ -33,12 +32,6 @@ import javax.net.ssl.SSLSession;
  * </pre>
  */
 public class WebTlsHelper {
-
-    private HttpDnsService httpDns ;
-
-    public WebTlsHelper(HttpDnsService httpDns) {
-        this.httpDns = httpDns;
-    }
 
     public WebResourceResponse shouldInterceptRequest(X5WebView webView, WebResourceRequest webResourceRequest) {
         String scheme = null;
@@ -139,23 +132,7 @@ public class WebTlsHelper {
         try {
             url = new URL(path);
             conn = (HttpURLConnection) url.openConnection();
-            // 异步接口获取IP
-            String ip = httpDns.getIpByHostAsync(url.getHost());
-            if (ip != null) {
-                // 通过HTTPDNS获取IP成功，进行URL替换和HOST头设置
-                X5LogUtils.d("Get IP: " + ip + " for host: " + url.getHost() + " from HTTPDNS successfully!");
-                String newUrl = path.replaceFirst(url.getHost(), ip);
-                conn = (HttpURLConnection) new URL(newUrl).openConnection();
-                if (headers != null) {
-                    for (Map.Entry<String, String> field : headers.entrySet()) {
-                        conn.setRequestProperty(field.getKey(), field.getValue());
-                    }
-                }
-                // 设置HTTP请求头Host域
-                conn.setRequestProperty("Host", url.getHost());
-            } else {
-                return null;
-            }
+
             conn.setConnectTimeout(30000);
             conn.setReadTimeout(30000);
             conn.setInstanceFollowRedirects(false);

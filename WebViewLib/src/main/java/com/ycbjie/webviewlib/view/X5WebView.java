@@ -23,8 +23,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.alibaba.sdk.android.httpdns.HttpDns;
-import com.alibaba.sdk.android.httpdns.HttpDnsService;
 import com.tencent.smtt.sdk.WebBackForwardList;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebHistoryItem;
@@ -60,7 +58,6 @@ public class X5WebView extends BridgeWebView {
     private X5WebViewClient x5WebViewClient;
     private X5WebChromeClient x5WebChromeClient;
     private volatile boolean mInitialized;
-    private HttpDnsService httpDns;
     public static boolean isLongClick = true;
 
     @Override
@@ -104,16 +101,8 @@ public class X5WebView extends BridgeWebView {
     private void initSetHttpDns() {
         if (X5WebUtils.isHttpDns){
             // 初始化http + dns
-            httpDns = HttpDns.getService(X5WebUtils.getApplication(), X5WebUtils.accountID);
             // 预解析热点域名
-            httpDns.setPreResolveHosts(X5WebUtils.host);
-            // 允许过期IP以实现懒加载策略
-            httpDns.setExpiredIPEnabled(true);
         }
-    }
-
-    public HttpDnsService getHttpDns() {
-        return httpDns;
     }
 
     /**

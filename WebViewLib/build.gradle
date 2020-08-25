@@ -30,9 +30,9 @@ dependencies {
     //okhttp库
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     //阿里https+dns开源库
-    implementation('com.aliyun.ams:alicloud-android-httpdns:1.1.7@aar') {
-        transitive true
-    }
+//    implementation('com.aliyun.ams:alicloud-android-httpdns:1.1.7@aar') {
+//        transitive true
+//    }
     //x5库
     //仅仅在编译时使用，但最终不会被编译到apk或aar里
     //provided files('libs/tbs_sdk_thirdapp_v4.3.0.3_43903_sharewithdownloadwithfile_withoutGame_obfs_20200402_121309.jar')

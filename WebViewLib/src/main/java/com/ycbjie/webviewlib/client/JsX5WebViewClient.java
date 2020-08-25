@@ -20,7 +20,6 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.text.TextUtils;
 
-import com.alibaba.sdk.android.httpdns.HttpDnsService;
 import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
 import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
 import com.tencent.smtt.sdk.WebView;
@@ -51,7 +50,6 @@ public class JsX5WebViewClient extends X5WebViewClient {
 
     private Context context;
     private X5WebView mWebView;
-    private HttpDnsService httpDns ;
     private WebTlsHelper tlsHelper;
 
     /**
@@ -64,10 +62,7 @@ public class JsX5WebViewClient extends X5WebViewClient {
         super(webView, context);
         this.mWebView = webView;
         this.context = context;
-        if (X5WebUtils.isHttpDns && httpDns==null){
-            httpDns = webView.getHttpDns();
-            tlsHelper = new WebTlsHelper(httpDns);
-        }
+
     }
 
     /**
