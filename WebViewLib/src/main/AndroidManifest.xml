@@ -22,8 +22,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".view.X5WebViewActivity"
             android:configChanges="orientation|screenSize"
@@ -31,7 +29,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
+            <!--        删除了会导致打开网页的代码-->
         </activity>
     </application>
 
