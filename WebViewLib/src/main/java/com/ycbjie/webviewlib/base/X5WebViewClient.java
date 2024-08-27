@@ -372,7 +372,7 @@ public class X5WebViewClient extends WebViewClient {
         }
         //html加载完成之后，添加监听图片的点击js函数
         //addImageClickListener();
-        addImageArrayClickListener(webView);
+//        addImageArrayClickListener(webView);
         isLoadFinish = true;
     }
 
